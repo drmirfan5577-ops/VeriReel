@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 240 33% 7%;
+    --foreground: 220 22% 96%;
+
+    --card: 240 26% 11%;
+    --card-foreground: 220 22% 96%;
+
+    --muted: 240 16% 17%;
+    --muted-foreground: 220 12% 66%;
+
+    --border: 240 16% 20%;
+    --input: 240 16% 20%;
+    --ring: 172 66% 46%;
+
+    --primary: 172 66% 46%;
+    --primary-foreground: 240 33% 7%;
+
+    --accent: 38 95% 58%;
+    --accent-foreground: 240 33% 7%;
+
+    --research: 172 70% 52%;
+    --health: 152 58% 50%;
+    --awareness: 38 95% 60%;
+
+    --radius: 0.9rem;
+  }
+
+  * {
+    border-color: hsl(var(--border));
+  }
+
+  body {
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+    font-family: "Inter", system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  ::selection {
+    background-color: hsl(var(--primary) / 0.3);
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: "Sora", system-ui, sans-serif;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .grid-noise {
+    background-image: radial-gradient(hsl(var(--border) / 0.7) 1px, transparent 1px);
+    background-size: 26px 26px;
+  }
+}
